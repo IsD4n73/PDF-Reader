@@ -1,16 +1,20 @@
-# pdf_viewer
+# PDF Viewer App
 
-PDF viewer for android
+Questa è una semplice app Flutter per visualizzare e interagire con i file PDF. L'app supporta le seguenti funzionalità:
 
-## Getting Started
+- **Apertura di file PDF**: Riceve e visualizza file PDF tramite **condivisione**.
+- **Navigazione**: È possibile navigare tra le pagine del PDF.
+- **Segnalibri**: Aggiungi segnalibri per memorizzare la posizione nel documento.
+- **Ricerca**: Cerca testo all'interno del PDF.
 
-This project is a starting point for a Flutter application.
+## Caratteristiche principali
 
-A few resources to get you started if this is your first Flutter project:
+- **Visualizzazione PDF**: Supporta la visualizzazione dei PDF tramite il pacchetto `syncfusion_flutter_pdfviewer`.
+- **Ricezione PDF**: L'app è configurata per ricevere e aprire i file PDF condivisi tramite altre app.
+- **Funzionalità aggiuntive**:
+    - **Navigazione tra le pagine**
+    - **Ricerca del testo**
+    - **Segnalibri**
+    - **Link interni nel PDF**
+    - **Modalità notte**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

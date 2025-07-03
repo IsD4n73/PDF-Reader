@@ -42,6 +42,7 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^30.1.38
   permission_handler: ^12.0.0+1
   path_provider: ^2.1.5
+  file_picker: ^10.2.0
 
   receive_sharing_intent:
     git:

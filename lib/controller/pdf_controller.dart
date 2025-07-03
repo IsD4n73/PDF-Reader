@@ -5,15 +5,20 @@ import 'package:flutter/material.dart';
 class PdfController extends GetxController {
   PdfViewerController pdfViewerController = PdfViewerController();
   TextEditingController searchController = TextEditingController();
-  PdfTextSearchResult searchResult = PdfTextSearchResult();
+  Rx<PdfTextSearchResult> searchResult = PdfTextSearchResult().obs;
+  RxBool hasSearchingResult = false.obs;
 
   void searchText(String text) {
-    searchResult = pdfViewerController.searchText(text);
+    searchResult.value = pdfViewerController.searchText(text);
+    searchResult.value.addListener(() {
+      hasSearchingResult.value = true;
+    });
   }
 
   void cleanSearch() {
     searchController.clear();
-    searchResult.clear();
+    searchResult.value.clear();
+    hasSearchingResult.value = false;
   }
 
   void zoomIn() {
@@ -25,4 +30,7 @@ class PdfController extends GetxController {
       pdfViewerController.zoomLevel -= 0.25;
     }
   }
+
+  void nextSearch() => searchResult.value.nextInstance();
+  void prevSearch() => searchResult.value.previousInstance();
 }

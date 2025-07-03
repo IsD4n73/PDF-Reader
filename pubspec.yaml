@@ -41,8 +41,11 @@ dependencies:
   bot_toast: ^4.1.3
   syncfusion_flutter_pdfviewer: ^30.1.38
   permission_handler: ^12.0.0+1
-  receive_sharing_intent: ^1.8.1
   path_provider: ^2.1.5
+
+  receive_sharing_intent:
+    git:
+      url: https://github.com/KasemJaffer/receive_sharing_intent
 
 
   # The following adds the Cupertino Icons font to your application.

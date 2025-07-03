@@ -5,6 +5,7 @@
 
     <application
         android:label="PDF Reader"
+        android:launchMode="singleTask"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

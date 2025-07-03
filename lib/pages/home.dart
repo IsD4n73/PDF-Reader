@@ -24,8 +24,7 @@ class HomePage extends StatelessWidget {
             ).tr(),
           );
         } else {
-          PdfViewer(pdfUrl: intentController.sharedPdfPath.value);
-          return SfPdfViewer.file(File(intentController.sharedPdfPath.value));
+          return PdfViewer(pdfUrl: intentController.sharedPdfPath.value);
         }
       }),
     );

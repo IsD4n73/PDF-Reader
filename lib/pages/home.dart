@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pdf_viewer/controller/intent_controller.dart';
@@ -17,7 +18,11 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: Text("PDF Reader")),
       body: Obx(() {
         if (intentController.sharedPdfPath.value == "") {
-          return Center(child: Text("Nessun PDF ricevuto, per usare l'app è necessario aprire un PDF e selezionare l'app come predefinita"));
+          return Center(
+            child: Text(
+              "Nessun PDF ricevuto, per usare l'app è necessario aprire un PDF e selezionare l'app come predefinita",
+            ).tr(),
+          );
         } else {
           PdfViewer(pdfUrl: intentController.sharedPdfPath.value);
           return SfPdfViewer.file(File(intentController.sharedPdfPath.value));
